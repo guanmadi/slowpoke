@@ -7,6 +7,6 @@
 #' @export
 load_data <- function() {
 
-  arrow::read_parquet("pokemon.parquet")
+  read_parquet("pokemon.parquet")
 
 }

@@ -34,11 +34,11 @@ find_many_pokes <- function(poke_names) {
 
   dat <- load_data()
 
-  pattern <- stringr::str_to_title(poke_names) |>
+  pattern <- str_to_title(poke_names) |>
     paste(collapse = "|")
 
   dat |>
-    filter(stringr::str_detect(name, pattern)) |>
+    filter(str_detect(name, pattern)) |>
     select(name, flavorText) |>
     distinct()
 
